@@ -15,9 +15,9 @@ No backend is required — all encryption and decryption happens locally in the 
 ---
 
 ## 🛠 Tech Stack
-Language: JavaScript
-API: Web Crypto API (window.crypto.subtle)
-Encoding: UTF-8 & Base64
+Language: JavaScript<br>
+API: Web Crypto API (window.crypto.subtle)<br>
+Encoding: UTF-8 & Base64<br>
 
 ---
 
@@ -28,25 +28,19 @@ git clone https://github.com/VP13104/AES-Encrypt_Decrypt.git <br>
 cd AES-Encrypt_Decrypt <br>
 Open index.html with any browser <br>
 
+---
+
 ## 🚀 Usage
-Encryption
+**Encryption**
+- Enter the text you want to encrypt.
+- Provide a password/key.
+- Click Encrypt.
+- The tool will display:
+- Encrypted text (Base64)
+- IV (Initialization Vector — required for decryption)
 
-Enter the text you want to encrypt.
+**Decryption**
+- Paste the encrypted text and the IV from the encryption step.
+- Enter the same password/key.
+- Click Decrypt to get back the original message.
 
-Provide a password/key.
-
-Click Encrypt.
-
-The tool will display:
-
-Encrypted text (Base64)
-
-IV (Initialization Vector — required for decryption)
-
-Decryption
-
-Paste the encrypted text and the IV from the encryption step.
-
-Enter the same password/key.
-
-Click Decrypt to get back the original message.
