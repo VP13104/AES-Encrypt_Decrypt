@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Browser AES Encrypt/Decrypt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Text Encryptor / Decryptor (Client-side)</h1>
+    <p class="muted">AES-GCM, keys derived from your password by SHA-256. Works offline in your browser.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="controls">
+        <button id="btnType" class="active">Type Text</button>
+        <button id="btnFile">Read File</button>
+      </div>
+
+      <div id="text-area">
+        <label>Input</label>
+        <textarea id="inputText" placeholder="Type or paste plaintext / ciphertext here..."></textarea>
+      </div>
+
+      <div id="file-area" style="display:none">
+        <label>Upload .txt (Encrypted file format)</label>
+        <input type="file" id="fileInput" accept=".txt" />
+      </div>
+
+      <label>Passphrase / Key (any length)</label>
+      <input id="passphrase" type="text" placeholder="Enter passphrase (any length)" />
+
+      <div class="alg-note">
+        <small><strong>Algorithm:</strong> AES-GCM (256-bit key derived via SHA-256). IV is random (12 bytes). Output encoded as Base64.</small>
+      </div>
+
+      <div class="buttons">
+        <button id="encryptBtn">Encrypt</button>
+        <button id="decryptBtn">Decrypt</button>
+        <button id="saveBtn">Save Output</button>
+        <button id="cleanBtn">Clear</button>
+      </div>
+
+      <label>Result</label>
+      <textarea id="resultText" readonly placeholder="Encrypted or decrypted result appears here..."></textarea>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
