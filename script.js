@@ -132,3 +132,12 @@ $('saveBtn').addEventListener('click', () => {
   a.href = url; a.download = 'encrypted_output.txt'; document.body.appendChild(a); a.click();
   document.body.removeChild(a); URL.revokeObjectURL(url);
 });
+
+// Clear all inputs
+$('clearBtn').addEventListener('click', () => {
+  $('inputText').value = '';
+  $('passphrase').value = '';
+  $('resultText').value = '';
+  $('fileInput').value = '';
+});
+
